@@ -21,7 +21,7 @@ namespace GME1003GoblinDanceParty
         private List<float> _starsScale;     //list of the scale for each star
         private List<Color> _starsColour;      //list of the colour for each star
 
-        private Texture2D _starSprite;  //the sprite image for our star
+        private Texture2D _christmasSphere, _background;  //the sprite image for our star
 
         private Random _rng;            //for all our random number needs
         private Color _starColor;       //let's have fun with colour!!
@@ -104,12 +104,13 @@ namespace GME1003GoblinDanceParty
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             //load out star sprite
-            _starSprite = Content.Load<Texture2D>("starSprite");
+            _christmasSphere = Content.Load<Texture2D>("ChristmasSphere");
+            _background = Content.Load<Texture2D>("christmasBackground");
 
 
             //***This is for the goblin. Ignore it for now.
-            goblin = new Goblin(Content.Load<Texture2D>("goblinIdleSpriteSheet"), 400, 400);
-            music = Content.Load<Song>("chiptune");
+            goblin = new Goblin(Content.Load<Texture2D>("goblinChristmasSprite"), 400, 400);
+            music = Content.Load<Song>("Song");
             
             //if you're tired of the music player, comment this out!
             MediaPlayer.Play(music);
@@ -136,17 +137,17 @@ namespace GME1003GoblinDanceParty
             _spriteBatch.Begin();
 
             //it would be great to have a background image here! 
-            //you could make that happen with a single Draw statement.
+            _spriteBatch.Draw(_background, new Vector2(0, 0), Color.White);
 
             //this is where we draw the stars...
             for (int i = 0; i < _numStars; i++) 
             {
-                _spriteBatch.Draw(_starSprite, 
+                _spriteBatch.Draw(_christmasSphere, 
                     new Vector2(_starsX[i], _starsY[i]),    //set the star position
                     null,                                   //ignore this
                     _starsColour[i] * _starsTrans[i],         //set colour and transparency
                     _starsRot[i],                          //set rotation
-                    new Vector2(_starSprite.Width / 2, _starSprite.Height / 2), //ignore this
+                    new Vector2(_christmasSphere.Width / 2, _christmasSphere.Height / 2), //ignore this
                     new Vector2(_starsScale[i], _starsScale[i]),    //set scale (same number 2x)
                     SpriteEffects.None,                     //ignore this
                     0f);                                    //ignore this

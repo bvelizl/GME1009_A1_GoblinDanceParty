@@ -1,0 +1,28 @@
+The first assignment of Object-oriented Programming was challenging, but also a good way to remember the last things 
+that we saw in the previous course. When I finished the last course, I had a feeling that we didn't have many assignments
+about MonoGame to make us feel confident with the topics that we saw, so this assignment is perfect to reinforce lists.
+
+I was able to complete all 6 steps for this assignment, but it was challenging:
+
+- The first step was easy for me because I just had to change a value from a variable to a random number.
+- This was the hardest. I had examples inside the program, and even with help from Discord I was not able to make it work.
+  My problem was that I was missing to add "add" in the line of code, and that was the mistake. After solving it, I could
+  move forward.
+- Step 3 and 4 was the same as step 2, so after I found the problem, it was easy to make it work.
+- Step 5 was another problematic moment for me because I was declaring an int List instead of a Color List. This made me
+  being stuck for a long time, changing lines of code over and over to try to find the problem. At last, the original
+  "private Color _starColor;" was the hint that helped me to move on.
+- Step 6 was the "creative" moment of this assignment. I really enjoyed it trying to make it my own version. The concept
+  is "evil Christmas" so I added a good background, and a hat to the goblin.
+
+I tried to commit every time I completed one of the steps of this assignment, so in case if have an issue to fix, i would
+have clear milestones on GitHub.
+
+In total, I made 10 pushes, but it should be only 8. I made a mistake in the comment of a push, so after trying to find
+the solution on the internet, something happened in my repository making 2 extra pushes.
+
+The trouble that I had with GitHub was that by mistake, I comment the same "step" in a push. I tried to fix it by activating
+"amend" but it never updated the comment of the push on GitHub. After a few tries, it duplicates the push with the correct
+comment, but it also create one "Merge branch 'master' of https://github.com/bvelizl/GME1009_A1_GoblinDanceParty". I was not
+able to find a way to delete commits on GitHub, so I decided to leave it that way.
+

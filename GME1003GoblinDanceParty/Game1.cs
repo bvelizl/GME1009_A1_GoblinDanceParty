@@ -13,21 +13,16 @@ namespace GME1003GoblinDanceParty
         private SpriteBatch _spriteBatch;
 
         //Declare some variables
-        private int _numStars;               //how many stars?
-        private List<int> _starsX;           //list of star x-coordinates
-        private List<int> _starsY;           //list of star y-coordinates
-        private List<float> _starsRot;       //list of rotation for each star
-        private List<float> _starsTrans;     //list of transparency for each star
-        private List<float> _starsScale;     //list of the scale for each star
-        private List<Color> _starsColour;      //list of the colour for each star
+        private int _numStars;                             //how many stars?
+        private List<int> _starsX;                         //list of star x-coordinates
+        private List<int> _starsY;                         //list of star y-coordinates
+        private List<float> _starsRot;                     //list of rotation for each star
+        private List<float> _starsTrans;                   //list of transparency for each star
+        private List<float> _starsScale;                   //list of the scale for each star
+        private List<Color> _starsColour;                  //list of the colour for each star
 
         private Texture2D _christmasSphere, _background;  //the sprite image for our star
-
-        private Random _rng;            //for all our random number needs
-        private Color _starColor;       //let's have fun with colour!!
-        private float _starScale;       //star size
-        private float _starTransparency;//star transparency
-        private float _starRotation;    //star rotation
+        private Random _rng;                              //for all our random number needs
 
 
         //***This is for the goblin. Ignore it.
@@ -52,11 +47,6 @@ namespace GME1003GoblinDanceParty
             _starsTrans = new List<float>();     //stars transparency
             _starsScale = new List<float>();     //stars scale
             _starsColour = new List<Color>();      //stars colour
-
-            _starColor = new Color(128 + _rng.Next(0,129), 128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129));                   //this is a "relatively" easy way to create random colors
-            _starScale = _rng.Next(50, 100) / 200f; //this will affect the size of the stars
-            _starTransparency = _rng.Next(25, 101)/100f;   //star transparency
-            _starRotation = _rng.Next(0, 101) / 100f;       //star rotation
 
             //use a separate for loop for each list - for practice
             //List of X coordinates
@@ -103,7 +93,7 @@ namespace GME1003GoblinDanceParty
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //load out star sprite
+            //load out star sprite, and background
             _christmasSphere = Content.Load<Texture2D>("ChristmasSphere");
             _background = Content.Load<Texture2D>("christmasBackground");
 

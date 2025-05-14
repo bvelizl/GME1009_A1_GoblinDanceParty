@@ -37,11 +37,6 @@
 /processorParam:TextureFormat=Color
 /build:ChristmasSphere.png
 
-#begin Experience during Assignment.txt
-/importer:
-/processor:
-/build:Experience during Assignment.txt
-
 #begin goblinChristmasSprite.png
 /importer:TextureImporter
 /processor:TextureProcessor
